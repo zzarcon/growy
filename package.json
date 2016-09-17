@@ -1,6 +1,6 @@
 {
   "name": "growy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Textarea-like web component which expands the height as the user types something",
   "main": "src/index.js",
   "scripts": {
