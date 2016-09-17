@@ -3,7 +3,16 @@
 
 Dependency free
 Web component
+Document **reset** method --> people may want to reset it manually
 
+Document
+  - reset-onenter
+  - min-height
+  - **clear**
+  - Events: 
+      - onenter
+      - ondelete
+      
 ### TODO:
 
 Support: 

@@ -7,32 +7,40 @@ const keyCodes = {
   shift: 16
 };
 
+const addEvent = (el) => (eventName, cb) => el.addEventListener(eventName, cb);
+const px = (value) => `${value}px`;
+
 class Growy extends HTMLTextAreaElement {
   attachedCallback() {
-    this.minHeight = this.getAttribute('min-height') || 50;
     this.shiftPressed = false;
+    this.minHeight = this.getAttribute('min-height') || 50;
+    this.resetOnEnter = this.getAttribute('reset-onenter') === 'false' ? false : true;
 
     this.setInitialStyles();
     this.addEvents();
   }
 
   addEvents() {
-    this.addEventListener('input', this.oninput(this.minHeight));
-    this.addEventListener('keyup', this.onkeyup);
-    this.addEventListener('keydown', this.onkeydown);
+    const on = addEvent(this);
+
+    on('input', this.oninput(this.minHeight));
+    on('keyup', this.onkeyup);
+    on('keydown', this.onkeydown);
   }
 
   setInitialStyles() {
-    this.style.minHeight = `${this.minHeight}px`;
-    this.style.resize = 'none';
-    this.style.outline = 'none';
-    this.style.padding = 0;
+    Object.assign(this.style, {
+      minHeight: px(this.minHeight),
+      resize: 'none',
+      outline: 'none',
+      padding: 0
+    });
   }
 
   oninput(minHeight) {
     return function() {
       const height = Math.max(this.scrollHeight, minHeight);
-      this.style.height = `${height}px`;
+      this.style.height = px(height);
     };
   }
 
@@ -47,15 +55,12 @@ class Growy extends HTMLTextAreaElement {
 
     if (code !== keyCodes.enter || !hasLength || this.shiftPressed) return;
 
-    //TODO: Is possible to know if an element has an event
-    //declared?
-
     this.triggerEvent('onenter');
-    this.resetState();
+    this.resetOnEnter && this.clear();
   }
 
-  resetState() {
-    this.style.height = `${this.minHeight}px`;
+  clear() {
+    this.style.height = px(this.minHeight);
     this.value = '';
   }
 
