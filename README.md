@@ -1,4 +1,4 @@
-# <img src="icon.png" width="45" align="left"> Growy
+# <img src="icon_green.png" width="45" align="left"> Growy
 > Textarea-like web component which expands the height as the user types something
 
 Dependency free
