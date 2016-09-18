@@ -1,4 +1,4 @@
-# growy
+# <img src="icon.png" width="45" align="left"> Growy
 > Textarea-like web component which expands the height as the user types something
 
 Dependency free
@@ -12,7 +12,7 @@ Document
   - Events: 
       - onenter
       - ondelete
-      
+
 ### TODO:
 
 Support: 
