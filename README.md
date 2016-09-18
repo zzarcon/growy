@@ -3,8 +3,9 @@
 
 ### Demo
   
-  <img src="videos/1.gif" width="300" align="left">
-  <img src="videos/2.gif" width="300" align="right">
+  <img src="videos/1.gif" width="270">
+  <img src="videos/2.gif" width="270">
+  <img src="videos/3.gif" width="270">
 
 ### Features
   - 100% Web Component :sparkling_heart:
