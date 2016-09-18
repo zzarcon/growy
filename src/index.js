@@ -3,6 +3,7 @@
  */
 
 const keyCodes = {
+  del: 8,
   enter: 13,
   shift: 16
 };
@@ -39,6 +40,8 @@ class Growy extends HTMLTextAreaElement {
 
   oninput(minHeight) {
     return function() {
+      //We need first to reset the height and later read the 'scrollHeight' 
+      this.style.height = "";
       const height = Math.max(this.scrollHeight, minHeight);
       this.style.height = px(height);
     };
@@ -71,7 +74,9 @@ class Growy extends HTMLTextAreaElement {
   }
 
   onkeydown(e) {
-    if (e.keyCode !== keyCodes.shift) return;
+    const code = e.keyCode;
+    
+    if (code !== keyCodes.shift) return;
 
     this.shiftPressed = true;
   }
