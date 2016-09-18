@@ -1,4 +1,5 @@
-# <img src="icon_green.png" width="45" align="left"> Growy
+# <img src="icon_green.png" width="45" align="left"> Growy [![npm version](https://badge.fury.io/js/growy.svg)](https://npmjs.com/package/growy)
+
 > Textarea-like web component which expands the height as the user types something [DEMO](https://zzarcon.github.io/growy)
 
 ### [Demo](https://zzarcon.github.io/growy)
