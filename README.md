@@ -2,9 +2,9 @@
 > Textarea-like web component which expands the height as the user types something
 
 ### Demo
-  TODO: Add gif
-  TODO: Create demo page
-  TODO: Add demo link
+  
+  <img src="videos/1.gif" width="300" align="left">
+  <img src="videos/2.gif" width="300" align="right">
 
 ### Features
   - 100% Web Component :sparkling_heart:
