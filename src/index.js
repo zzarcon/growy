@@ -82,7 +82,7 @@ class Growy extends HTMLTextAreaElement {
   }
 };
 
-document.registerElement('x-growy', {
+document.registerElement('growy-area', {
   prototype: Growy.prototype,
   extends: 'textarea'
 });
