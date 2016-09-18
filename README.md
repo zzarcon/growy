@@ -1,7 +1,7 @@
 # <img src="icon_green.png" width="45" align="left"> Growy
-> Textarea-like web component which expands the height as the user types something
+> Textarea-like web component which expands the height as the user types something [DEMO](https://zzarcon.github.io/growy)
 
-### Demo
+### [Demo](https://zzarcon.github.io/growy)
   
   <img src="videos/1.gif" width="290">
   <img src="videos/2.gif" width="290">
@@ -14,10 +14,13 @@
   - Works as you will expect :rocket:
 
 ### Usage
+In order to make *Growy* work, you just need to require the module and set `is="growy-area"` into any textarea. Easy? :stuck_out_tongue_winking_eye:
 
 ```html
 <textarea id="demo" is="growy-area"></textarea>
 ```
+
+Additionaly, if you want to subscribe to any event, you can do it as you have always done it with other elements :sunglasses:
 
 ```javascript
 require('growy');
@@ -59,10 +62,40 @@ $ npm i growy
 
 ### Explanation and motivation
 
-- web components
-- "is"
-- custom event name
-- web components status
+I know it may seem a stupid component, but I always wanted to have such component without any dependency and easy to use, my motivation was to build it in such way that you can just drop it in your app and start using it.
+
+Also I tried to provide the easiest api possible, no api, since it uses WebComponents technology.
+
+It also handles `shift` keys, which is nice.
+
+### Extending
+
+Let's say we want to create our custom Growy and add a behaviour in which whenever the user press the `DEL` key, we want to clear the value and set the original height. Simple as:
+
+```javascript
+const Growy = require('growy');
+
+class CustomGrowy extends Growy {
+  attachedCallback() {
+    this.addEventListener('keydown', function(e) {
+      if (e.keyCode === 8) { //DEL key
+        this.reset();
+      }
+    })
+  }
+}
+
+document.registerElement('custom-growy', {
+  prototype: CustomGrowy.prototype,
+  extends: 'textarea'
+});
+```
+
+```html
+<textarea is="custom-growy"></textarea>
+```
+
+Have fun!
 
 ### Author
 
