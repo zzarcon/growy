@@ -8,8 +8,25 @@ const init = () => {
 }
 
 const onenter = function() {
-  console.log('onenter')
+  const message = createMessage(this.value);
+
+  appendMessage('.messages', message);
 };
+
+const createMessage = value => {
+  const msg = document.createElement('div');
+
+  msg.innerText = value;
+
+  return msg;
+};
+
+const appendMessage = (selector, message) => {
+  const wrapper = document.querySelector(selector);
+
+  wrapper.appendChild(message);
+};
+
 
 document.addEventListener('DOMContentLoaded', init);
 },{"growy":2}],2:[function(require,module,exports){

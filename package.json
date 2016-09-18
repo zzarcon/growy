@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "watchify index.js -o bundle.js -v",
+    "styles": "node-sass styles.scss styles.css -w",
     "serve": "serve"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/zzarcon/growy#readme",
   "devDependencies": {
     "browserify": "^13.1.0",
+    "node-sass": "^3.10.0",
     "serve": "^1.4.0",
     "watchify": "^3.7.0"
   },

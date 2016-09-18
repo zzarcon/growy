@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <title>Growy Demo</title>
   <script src="bundle.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <textarea id="demo-area" is="growy-area"></textarea>
-  <!-- <textarea id="demo-area" is="growy-area" min-height="100"></textarea> -->
-  <!-- <textarea id="demo-area" is="growy-area" reset-onenter="false"></textarea> -->
+  <div class="chat-wrapper">
+    <div class="messages"></div>
+    <div class="chat">
+      <div class="chat-child">
+        <div class="emoji">😀</div>
+        <textarea id="demo-area" is="growy-area" min-height="20"></textarea>
+      </div>
+    </div>  
+  </div>
 </body>
 </html>

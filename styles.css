@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: Verdana;
+  color: #504b4b; }
+
+.chat-wrapper {
+  width: 232px;
+  overflow: hidden; }
+
+.messages div {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  word-break: break-word; }
+  .messages div:first-child {
+    border-top: 1px solid #ccc; }
+  .messages div:last-child {
+    border-bottom-color: transparent; }
+
+.chat {
+  min-height: 38px;
+  border: 1px solid #ccc;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 7px;
+  padding-right: 7px;
+  padding-bottom: 7px; }
+  .chat > * {
+    display: flex; }
+  .chat .emoji {
+    width: 28px;
+    padding: 0 5px;
+    height: 20px;
+    margin-top: -4px;
+    position: absolute;
+    left: 0;
+    top: 8px; }
+  .chat textarea {
+    height: 20px;
+    border: none;
+    flex: 1;
+    font-size: 15px; }
