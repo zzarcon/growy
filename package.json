@@ -1,12 +1,11 @@
 {
-  "name": "growy",
-  "version": "0.1.2",
-  "description": "Textarea-like web component which expands the height as the user types something",
-  "main": "src/index.js",
+  "name": "growy-demo",
+  "version": "0.0.1",
+  "description": "Growy demo",
+  "main": "index.js",
   "scripts": {
-    "watch": "watchify tests/index.js -o tests/test_bundle.js -v",
-    "serve": "serve",
-    "release": "npm version patch && npm publish && git push --tags && git push"
+    "watch": "watchify index.js -o bundle.js -v",
+    "serve": "serve"
   },
   "repository": {
     "type": "git",
@@ -22,5 +21,8 @@
     "browserify": "^13.1.0",
     "serve": "^1.4.0",
     "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "growy": "^0.1.2"
   }
 }

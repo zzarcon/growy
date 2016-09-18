@@ -1,4 +1,4 @@
-require('../src');
+require('growy');
 
 const init = () => {
   const element = document.querySelector('#demo-area');
