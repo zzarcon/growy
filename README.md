@@ -98,6 +98,10 @@ document.registerElement('custom-growy', {
 
 Have fun!
 
+### Browser support
+
+Since Web Components are not really well supported yet in any other browser than Chrome, you will probably need to add the [Web Components Polyfill](https://github.com/webcomponents/webcomponentsjs) to your application.
+
 ### Author
 
 [@zzarcon](https://twitter.com/zzarcon) :beers:
