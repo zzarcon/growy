@@ -1,3 +1,4 @@
+require('webcomponents.js');
 require('growy');
 
 const init = () => {

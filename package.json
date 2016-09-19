@@ -25,6 +25,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "growy": "^0.1.2"
+    "growy": "^0.1.2",
+    "webcomponents.js": "^0.7.22"
   }
 }

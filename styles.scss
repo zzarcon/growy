@@ -23,7 +23,8 @@ body{
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     word-break: break-word;
-
+    word-wrap: break-word;
+    
     &:first-child{
       border-top: 1px solid #ccc;
     }
